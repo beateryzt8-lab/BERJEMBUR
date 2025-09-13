@@ -1,1 +1,183 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+  <title>BabyPEPE — 10000x? 👶🪙</title>
+  <meta name="description" content="Looking 10000x coin dude? BabyPEPE web hub — dark, funny, minimal." />
+  <style>
+    :root{
+      --bg:#0b0f12; --panel:#0f1418; --accent:#22ff99; --muted:#98a0a6;
+      --glass: rgba(255,255,255,0.03);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:linear-gradient(180deg,#071018 0%, #050608 100%);
+      color:#e6eef6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      display:flex; align-items:center; justify-content:center; padding:20px;
+    }
+
+    .card{
+      width:100%; max-width:760px; background:var(--panel); border-radius:18px; padding:18px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6); border:1px solid rgba(255,255,255,0.03);
+      backdrop-filter: blur(6px);
+    }
+
+    header{display:flex; gap:12px; align-items:center}
+    .logo{
+      width:64px; height:64px; border-radius:12px; display:grid; place-items:center; font-size:30px;
+      background:linear-gradient(135deg, rgba(34,255,153,0.08), rgba(34,255,153,0.02));
+      border:1px solid rgba(34,255,153,0.12);
+    }
+    h1{font-size:20px;margin:0}
+    p.lead{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+    .desc{margin:14px 0;padding:12px;border-radius:10px;background:var(--glass); font-size:15px}
+
+    .links{display:flex;flex-direction:column;gap:10px}
+    .link-row{display:flex;gap:10px;align-items:center}
+    .btn{
+      flex:1; padding:12px 14px; border-radius:10px; background:transparent; border:1px solid rgba(255,255,255,0.04);
+      display:flex;align-items:center;gap:10px; cursor:pointer; user-select:none; font-size:14px;
+    }
+    .btn .meta{display:flex;flex-direction:column;align-items:flex-start}
+    .small{font-size:12px;color:var(--muted)}
+
+    .accent{color:var(--accent); font-weight:700}
+
+    .controls{display:flex;gap:8px;margin-top:12px}
+    .icon{font-size:18px}
+
+    .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:22px;background:#111;padding:10px 16px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 6px 24px rgba(0,0,0,0.5);display:none}
+
+    footer{margin-top:12px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+
+    /* tiny responsive tweaks */
+    @media (max-width:420px){
+      .logo{width:54px;height:54px;font-size:26px}
+      h1{font-size:18px}
+      .btn{padding:10px}
+    }
+
+    /* subtle floating animation */
+    .logo{animation:float 4s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+  </style>
+</head>
+<body>
+  <div class="card" role="main">
+    <header>
+      <div class="logo" aria-hidden>🐸</div>
+      <div>
+        <h1>BabyPEPE <span class="small">• 10000x? (ta opo)</span></h1>
+        <p class="lead">Tiny memecoin vibes — loud dreams, funny style, low-key web3 links.</p>
+      </div>
+    </header>
+
+    <div class="desc" id="desc">Looking 10000x coin dude? Tap the links below — may contain moon juice and wholesome chaos.</div>
+
+    <div class="links">
+      <div class="link-row">
+        <button class="btn" onclick="openAndCopy('https://t.me/babypepe_100x', 'Telegram')" title="Open Telegram">
+          <div style="font-size:20px">💬</div>
+          <div class="meta">
+            <div>Telegram</div>
+            <div class="small">@babypepe_100x — open or copy</div>
+          </div>
+        </button>
+        <button class="btn" onclick="copyToClipboard('https://t.me/babypepe_100x')">Copy</button>
+      </div>
+
+      <div class="link-row">
+        <button class="btn" onclick="openAndCopy('https://twitter.com/babypepe_x100', 'Twitter')" title="Open Twitter">
+          <div style="font-size:20px">🐦</div>
+          <div class="meta">
+            <div>Twitter</div>
+            <div class="small">@babypepe_x100 — tweets & memes</div>
+          </div>
+        </button>
+        <button class="btn" onclick="copyToClipboard('https://twitter.com/babypepe_x100')">Copy</button>
+      </div>
+
+      <div class="link-row">
+        <button class="btn" onclick="openAndCopy('https://dexscreener.com/solana/2iFd8mKkRAyvbbaM36SGZah1dzugzUAkiwPAqbmRu2sJ', 'Dexscreener')" title="Open Dexscreener">
+          <div style="font-size:20px">📈</div>
+          <div class="meta">
+            <div>Dexscreener</div>
+            <div class="small">SOL market view — open or copy</div>
+          </div>
+        </button>
+        <button class="btn" onclick="copyToClipboard('https://dexscreener.com/solana/2iFd8mKkRAyvbbaM36SGZah1dzugzUAkiwPAqbmRu2sJ')">Copy</button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="btn" onclick="randomizeText()">Surprise me</button>
+      <button class="btn" onclick="toggleTheme()">Toggle accent</button>
+    </div>
+
+    <footer>
+      <div>Made with 🐸 & a lil' hype</div>
+      <div class="small">Android-friendly • Minimal • Dark</div>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite">Copied!</div>
+
+  <script>
+    function showToast(msg){
+      const t = document.getElementById('toast'); t.textContent = msg; t.style.display='block';
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(()=> t.style.display='none',1500);
+    }
+
+    async function copyToClipboard(text){
+      try{
+        await navigator.clipboard.writeText(text);
+        showToast('Link copied to clipboard');
+      }catch(e){
+        showToast('Press and hold to copy');
+      }
+    }
+
+    function openAndCopy(url, name){
+      // open in new tab/pop-up-friendly for Android
+      window.open(url, '_blank', 'noopener');
+      showToast(name + ' opened');
+    }
+
+    // playful small interactions
+    const variants = [
+      'Looking 10000x coin dude?',
+      'Moon or bust — baby pepe says HODL!',
+      'Tiny frog, big dreams. Do your own research.',
+      'Not financial advice — only vibes and memes.'
+    ];
+    function randomizeText(){
+      const i = Math.floor(Math.random()*variants.length);
+      document.getElementById('desc').textContent = variants[i];
+      showToast('Updated description');
+    }
+
+    function toggleTheme(){
+      const root = document.documentElement;
+      // playful accent swap
+      if(getComputedStyle(root).getPropertyValue('--accent').trim()==='#22ff99'){
+        root.style.setProperty('--accent','#ff66c4');
+      } else {
+        root.style.setProperty('--accent','#22ff99');
+      }
+      showToast('Accent toggled');
+    }
+
+    // tiny touch improvements for Android
+    (function(){
+      // prevent zoom on double-tap older UA (best-effort)
+      document.addEventListener('touchstart', function(){}, {passive:true});
+    })();
+  </script>
+</body>
+</html>
